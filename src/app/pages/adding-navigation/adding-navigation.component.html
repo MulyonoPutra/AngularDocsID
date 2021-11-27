@@ -1,0 +1,82 @@
+<div class="container">
+  <h1>Adding Navigation</h1>
+  <p>Panduan ini dibangun atas langkah awal, memulai dengan basic aplikasi
+    Angular.</p>
+  <p>Pada tahap development ini, aplikasi online store memiliki basic product catalog.</p>
+  <p>
+    Dibagian berikut, anda akan menambahkan fitur berikut pada aplikasi:
+  </p>
+  <ul>
+    <li>
+      <p>
+        Type URL pada address bar untuk navigasi ke corresponding product page.
+      </p>
+    </li>
+    <li>
+      <p>
+        Click link pada halaman navigate dalam single-page-application yang kamu miliki.
+      </p>
+    </li>
+    <li>
+      <p>
+        Click tombol back dan forward browser untuk menavigasi browser history secara intuitif.
+      </p>
+    </li>
+  </ul>
+
+  <h3>Associate a URL path with a component</h3>
+  <p>Aplikasi telah menggunakan Angular Router untuk menavigasi ke <strong>ProductListComponent</strong>. Bagian
+    ini menunjukkan pada anda cara menentukan router untuk menampilkan individual <em>product
+      details</em>.</p>
+  <p>1. Generate component baru untuk Product Details. Pada terminal generate component baru dengan mengikuti contoh
+    code berikut ini:</p>
+
+  <div class="clipboard-card">
+    <a>{{value}}</a>
+    <a [cdkCopyToClipboard]="value" class="copy-icon" (click)="copy()">
+      <img src="/assets/images/svg/copy.svg" />
+    </a>
+  </div>
+
+  <p>
+    2. Pada <em>app.module.ts</em>, tambahkan router untuk product details, dengan path of <em>products/:productld</em>
+    dan ProductDetailsComponent untuk component, sertakan ProductDetailsComponent dalam
+    AppModule’s declarations.
+  </p>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><p>src/app/app.module.ts</p></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <a [cdkCopyToClipboard]="appModule" class="copy-icon" (click)="copy()" style="margin-right: 10px; margin-top: 10px;">
+        <img src="/assets/images/svg/copy.svg" />
+      </a>
+      <div>
+        <pre>
+          <code [innerHTML]="appModule" class="code-snippets"></code>
+        </pre>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <p>3. Buka product-list.component.html.</p>
+  <p>4. Ubah anchor tag <em>href</em> dengan <em>routerLink</em> dengan the product.id sebagai parameter.</p>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <p>src/app/app.module.ts</p>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <a [cdkCopyToClipboard]="value" class="copy-icon" (click)="copy()" style="margin-right: 10px; margin-top: 10px;">
+          <img src="/assets/images/svg/copy.svg" />
+        </a>
+        <div>
+          <pre>
+              <code [innerHTML]="productListComponent" class="code-snippets"></code>
+            </pre>
+        </div>
+      </mat-card-content>
+    </mat-card>

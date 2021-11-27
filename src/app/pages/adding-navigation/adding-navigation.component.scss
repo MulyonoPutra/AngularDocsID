@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.container {
+  padding: 8px 344px 144px 370px;
+  text-align: left;
+}
+
+.code-example {
+  background-color: #444;
+  width: 350px;
+}
+
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+//   background-color: #444;
+//   border-radius: 5px;
+// }
+
+// ::ng-deep .mat-input-element:disabled {
+//   color: #17ff0b;
+//   width: 350px;
+// }
+
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+//   padding: 0 0.75em 0 0.75em;
+//   margin-top: -0.25em;
+//   position: relative;
+//   width: 350px;
+// }
+
+
+
+.copy-icon {
+  float: right;
+}
+
+.code-snippets {
+  font-family: 'Fira Code', monospace;
+  font-size: 90%;
+  line-height: 2.4rem;
+}
+
+.mat-card-header {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: rgb(30, 136, 229) !important;
+}
+
+.mat-card {
+  border-radius: 10px;
+  padding: 0 !important;
+  width: 700px;
+}
+
+.mat-card-content {
+  padding: 2px !important;
+  background:#444;
+  color: aliceblue;
+    border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.mat-card-title {
+  margin-bottom: 12px !important;
+}
+
+.clipboard {
+  &-card {
+    width: 350px;
+    background: #444;
+    padding: 12px;
+    border: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    border-radius: 6px;
+    a {
+      font-size: 16px;
+      line-height: 24px;
+      overflow-wrap: break-word;
+      color: #17ff0b;
+    }
+  }
+}
+
+mat-card-title {
+  h4 {
+    color: #ffff
+  }
+}
