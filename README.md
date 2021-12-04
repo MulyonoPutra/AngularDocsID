@@ -1,5 +1,10 @@
 # AngularDocumentation
 
+![image](https://user-images.githubusercontent.com/50153639/144696325-45bd4dc7-9ad0-4e21-a0b9-ca59ab7b882a.png)
+
+![image](https://user-images.githubusercontent.com/50153639/144696345-169882e5-a153-472a-a5f7-eabe736bc9e5.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 
 ## Development server
