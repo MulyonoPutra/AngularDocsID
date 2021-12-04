@@ -4,6 +4,12 @@
     <mat-nav-list>
       <app-menu *ngFor="let item of navItems" [item]="item"></app-menu>
     </mat-nav-list>
+
   </mat-sidenav>
-  <router-outlet></router-outlet>
+  <div class="set-padding rounded-lg py-4">
+      <mat-card>
+        <router-outlet></router-outlet>
+      </mat-card>
+  </div>
+
 </mat-sidenav-container>

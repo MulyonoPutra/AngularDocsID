@@ -45,8 +45,38 @@ export class AddingNavigationComponent implements OnInit {
       </div> -->
       `
 
-  ngOnInit(): void {
-  }
+  productDetailsImport: string = `
+      import { Component, OnInit } from '@angular/core';
+      import { ActivatedRoute } from '@angular/router';
+      import { Product, products } from '../products';
+    `
+
+  productProperties: string = `
+      export class ProductDetailsComponent implements OnInit {
+        product: Product | undefined;
+      /* ... */
+      }
+  `
+
+  activatedRoute: string = `
+      export class ProductDetailsComponent implements OnInit {
+      product: Product | undefined;
+      constructor(private route: ActivatedRoute) { }
+      }
+  `
+
+  productDetailsId: string = `
+      ngOnInit() {
+        // First get the product id from the current route.
+        const routeParams = this.route.snapshot.paramMap;
+        const productIdFromRoute = Number(routeParams.get('productId'));
+
+        // Find the product that correspond with the id provided in route.
+        this.product = products.find(product => product.id === productIdFromRoute);
+      }
+  `
+
+  ngOnInit(): void {}
 
   copy() {
     console.log('clicked');
@@ -55,7 +85,5 @@ export class AddingNavigationComponent implements OnInit {
       duration: 3000,
     })
   }
-
-
 
 }
